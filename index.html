@@ -1,19 +1,107 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Crawford Solar Power – Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crawford Solar Power – Solar Trees Corridor</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    body{font-family:system-ui, sans-serif;display:flex;
-         justify-content:center;align-items:center;
-         height:100vh;margin:0;background:#f2f6f8;}
-    h1{font-size:clamp(1.5rem,5vw,3rem);color:#333;}
+    * {box-sizing:border-box;margin:0;padding:0;}
+    body {font-family:system-ui,sans-serif;line-height:1.5;color:#333;}
+    header {position:fixed;top:0;left:0;width:100%;padding:1rem 2rem;
+            display:flex;justify-content:space-between;align-items:center;
+            background:rgba(255,255,255,0.8);backdrop-filter:blur(5px);z-index:10;}
+    header a.logo {font-size:1.25rem;font-weight:700;color:#111;text-decoration:none;}
+    header nav a {margin-left:1.5rem;color:#111;text-decoration:none;font-weight:500;}
+    .hero {position:relative;width:100%;height:100vh;overflow:hidden;}
+    .hero video, .hero .fallback {
+      position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;
+      transform:translate(-50%,-50%);object-fit:cover;
+    }
+    .hero .fallback {display:none;background:url('assets/solar-tree.jpg')center/cover;}
+    .hero .overlay {
+      position:absolute;top:0;left:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.4);
+    }
+    .hero .content {
+      position:relative;z-index:2;
+      display:flex;flex-direction:column;align-items:center;
+      justify-content:center;height:100%;text-align:center;color:#fff;
+      padding:0 1rem;
+    }
+    .hero h1 {font-size:clamp(2rem,5vw,4rem);margin-bottom:0.5rem;}
+    .hero p  {font-size:clamp(1rem,2.5vw,1.5rem);max-width:30rem;}
+    .hero a.cta {
+      margin-top:1.5rem;padding:0.75rem 2rem;border:2px solid #fff;
+      border-radius:9999px;text-decoration:none;color:#fff;font-weight:600;
+      transition:background 0.3s, color 0.3s;
+    }
+    .hero a.cta:hover {background:#fff;color:#000;}
+    .section {padding:4rem 2rem;max-width:80rem;margin:0 auto;}
+    .about {display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
+    .about img {width:100%;border-radius:0.5rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+    .gallery {text-align:center;}
+    .gallery .grid {
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));
+      gap:1rem;margin-top:2rem;
+    }
+    .gallery img {width:100%;border-radius:0.5rem;object-fit:cover;height:10rem;}
+    footer {
+      text-align:center;padding:2rem 1rem;background:#111;color:#eee;
+      font-size:0.9rem;
+    }
+    @media (max-width:768px) {
+      .about {grid-template-columns:1fr;}
+      header {flex-direction:column;align-items:flex-start;}
+      header nav {margin-top:0.5rem;}
+    }
   </style>
 </head>
 <body>
-  <h1>🌞 Crawford Solar Power<br>Website launching shortly…</h1>
+
+  <header>
+    <a href="/" class="logo">Crawford Solar Power</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="mailto:info@crawfordsolarpower.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <!-- Replace with your MP4 (upload to assets/solar-highway.mp4) -->
+    <video src="assets/solar-highway.mp4" autoplay muted loop playsinline>
+      <!-- Fallback if video doesn’t load -->
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Solar Trees 🌞 Powering Tomorrow’s Highways</h1>
+      <p>Join us as we deploy a state‑of‑the‑art solar corridor from Accra to Kumasi—integrating EV charging, microgrids, and beauty in infrastructure.</p>
+      <a href="mailto:info@crawfordsolarpower.com" class="cta">Partner with Us</a>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div>
+      <h2>About Our Solar Trees</h2>
+      <p>Each “tree” is a 10 kW modular canopy that harvests sunlight and powers electric vehicles, grid storage, and roadside services. Designed for durability and elegance, our installations redefine how highways look—and how they work.</p>
+    </div>
+    <img src="assets/solar-tree.jpg" alt="Solar Tree example">
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <h2>Project Gallery</h2>
+    <div class="grid">
+      <img src="assets/photo1.jpg" alt="Solar Tree at dawn">
+      <img src="assets/photo2.jpg" alt="Installation overview">
+      <img src="assets/photo3.jpg" alt="Close‑up of panels">
+      <img src="assets/photo4.jpg" alt="EV charging under solar canopy">
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Crawford Solar Power • 13607 Hidden Dell Court, Houston, TX 77059 • <a href="mailto:info@crawfordsolarpower.com" style="color:#eee;text-decoration:underline;">info@crawfordsolarpower.com</a>
+  </footer>
+
 </body>
 </html>
-<!-- rebuild trigger -->
