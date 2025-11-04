@@ -41,7 +41,7 @@ if (bgVideo) {
   });
 }
 
-// Pause other videos when one starts (to avoid overlapping audio)
+// Pause other videos when one starts (avoid overlapping sound)
 const allVideos = document.querySelectorAll('video');
 allVideos.forEach(video => {
   video.addEventListener('play', function() {
@@ -51,7 +51,7 @@ allVideos.forEach(video => {
   });
 });
 
-// Light motion for hover on media items
+// Light hover motion
 document.querySelectorAll('.media-item').forEach(item => {
   item.addEventListener('mouseenter', () => item.classList.add('hovered'));
   item.addEventListener('mouseleave', () => item.classList.remove('hovered'));
