@@ -1,5 +1,5 @@
 /* =====================
-   Base Styles
+   RESET & BASE
 ===================== */
 * {
   margin: 0;
@@ -9,27 +9,30 @@
 
 body {
   font-family: 'Segoe UI', Roboto, sans-serif;
-  color: #1b1b1b;
   background-color: #fdfdfd;
+  color: #1b1b1b;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
 /* =====================
-   Header
+   HEADER
 ===================== */
 .site-header {
-  background-color: #004c3f;
-  color: white;
-  padding: 1rem 0;
+  background: white;
+  border-bottom: 2px solid #004c3f;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  padding: 1rem 0;
 }
 
 .nav {
@@ -39,15 +42,15 @@ body {
 }
 
 .logo {
-  height: 50px;
+  height: 55px;
   width: auto;
 }
 
 nav a {
-  color: white;
+  color: #004c3f;
   text-decoration: none;
   margin: 0 0.8rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 nav a:hover {
@@ -55,135 +58,132 @@ nav a:hover {
 }
 
 /* =====================
-   Hero Section
+   HERO SECTION
 ===================== */
 .hero {
-  background-color: #eaf7f2;
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-.hero h1 {
-  font-size: 2.4rem;
-  color: #004c3f;
-  margin-bottom: 1rem;
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(60%);
 }
 
-.hero p {
-  margin-bottom: 1rem;
-  color: #333;
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 0 1rem;
 }
 
-.hero .btn-primary {
-  display: inline-block;
+.hero-overlay h1 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-overlay .highlight {
+  color: #00ffa3;
+}
+
+.hero-overlay .btn-primary {
   background-color: #007b5e;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   border-radius: 6px;
-  font-weight: bold;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-.hero .btn-primary:hover {
+.hero-overlay .btn-primary:hover {
   background-color: #005f4b;
 }
 
-.hero-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}
-
-.hero-card h2 {
-  color: #007b5e;
-  margin-bottom: 1rem;
-}
-
-.hero-media video {
-  margin-top: 2rem;
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
 /* =====================
-   Sections
+   SECTIONS
 ===================== */
 .section {
-  padding: 3rem 0;
+  padding: 4rem 0;
+  text-align: center;
 }
 
 .section.alt {
-  background-color: #f5f9f7;
+  background-color: #f6faf8;
 }
 
 .section h2 {
   color: #004c3f;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 .section p {
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: white;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  color: #007b5e;
-  margin-bottom: 0.5rem;
+  max-width: 850px;
+  margin: auto;
+  color: #333;
 }
 
 /* =====================
-   Media Gallery
+   MEDIA GALLERY
 ===================== */
 .media-gallery {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.media-gallery img,
-.media-gallery video {
+.media-item {
+  flex: 1 1 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.media-item:hover {
+  transform: scale(1.03);
+}
+
+.media-item img,
+.media-item video {
   width: 100%;
-  max-width: 480px;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.caption {
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  background: #004c3f;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
 }
 
 /* =====================
-   Founder Section
+   FOUNDER SECTION
 ===================== */
 .section.narrow {
   max-width: 700px;
   margin: auto;
-  text-align: center;
 }
 
 .btn-primary {
@@ -194,6 +194,7 @@ nav a:hover {
   font-weight: bold;
   text-decoration: none;
   display: inline-block;
+  margin-top: 1.2rem;
 }
 
 .btn-primary:hover {
@@ -201,31 +202,31 @@ nav a:hover {
 }
 
 /* =====================
-   Footer
+   FOOTER
 ===================== */
 .site-footer {
   background-color: #004c3f;
   color: white;
-  padding: 1.5rem 0;
+  padding: 1.8rem 0;
   text-align: center;
   font-size: 0.9rem;
 }
 
 /* =====================
-   Responsive
+   RESPONSIVE DESIGN
 ===================== */
 @media (max-width: 768px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .media-item {
+    flex: 1 1 90%;
   }
 
   nav {
     display: block;
     text-align: center;
-    margin-top: 1rem;
-  }
-
-  .hero-card {
-    text-align: center;
+    margin-top: 0.8rem;
   }
 }
