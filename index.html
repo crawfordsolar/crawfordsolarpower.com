@@ -1,134 +1,124 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Crawford Solar Power – Solar Trees Corridor</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    * {box-sizing:border-box;margin:0;padding:0;}
-    body {font-family:system-ui,sans-serif;line-height:1.5;color:#333;}
-    header {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  padding: 1rem 0;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10;
-}
-
-header .logo img {
-  max-height: 60px;   /* adjust as needed */
-}
-
-header nav {
-  margin-top: 0.5rem;
-  display: flex;
-  gap: 1.5rem;
-}
-
-    .hero {position:relative;width:100%;height:100vh;overflow:hidden;}
-    .hero video, .hero .fallback {
-      position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;
-      transform:translate(-50%,-50%);object-fit:cover;
-    }
-    .hero .fallback {display:none;background:url('assets/solar-tree.jpg')center/cover;}
-    .hero .overlay {
-      position:absolute;top:0;left:0;width:100%;height:100%;
-      background:rgba(0,0,0,0.4);
-    }
-    .hero .content {
-      position:relative;z-index:2;
-      display:flex;flex-direction:column;align-items:center;
-      justify-content:center;height:100%;text-align:center;color:#fff;
-      padding:0 1rem;
-    }
-    .hero h1 {font-size:clamp(2rem,5vw,4rem);margin-bottom:0.5rem;}
-    .hero p  {font-size:clamp(1rem,2.5vw,1.5rem);max-width:30rem;}
-    .hero a.cta {
-      margin-top:1.5rem;padding:0.75rem 2rem;border:2px solid #fff;
-      border-radius:9999px;text-decoration:none;color:#fff;font-weight:600;
-      transition:background 0.3s, color 0.3s;
-    }
-    .hero a.cta:hover {background:#fff;color:#000;}
-    .section {padding:4rem 2rem;max-width:80rem;margin:0 auto;}
-    .about {display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;}
-    .about img {width:100%;border-radius:0.5rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
-    .gallery {text-align:center;}
-    .gallery .grid {
-      display:grid;grid-template-columns:repeat(auto-fit,minmax(12rem,1fr));
-      gap:1rem;margin-top:2rem;
-    }
-    .gallery img {width:100%;border-radius:0.5rem;object-fit:cover;height:10rem;}
-    footer {
-      text-align:center;padding:2rem 1rem;background:#111;color:#eee;
-      font-size:0.9rem;
-    }
-    @media (max-width:768px) {
-      .about {grid-template-columns:1fr;}
-      header {flex-direction:column;align-items:flex-start;}
-      header nav {margin-top:0.5rem;}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crawford Solar Power | EDEN Tree Network</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-
- <header>
-  <a href="/" class="logo">
-    <img src="assets/logo.png" alt="Crawford Solar Power logo">
-  </a>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="mailto:info@crawfordsolarpower.com">Contact</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">Crawford Solar</div>
+      <nav>
+        <a href="#founder">Founder $100</a>
+        <a href="#eden">EDEN Tree</a>
+        <a href="#fleet">Hive EV Fleet</a>
+        <a href="#learn">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <section class="hero">
-    <!-- Replace with your MP4 (upload to assets/solar-highway.mp4) -->
-    <video src="assets/solar-highway.mp4" autoplay muted loop playsinline>
-      <!-- Fallback if video doesn’t load -->
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>Solar Trees 🌞 Powering Tomorrow’s Highways</h1>
-      <p>Join us in building solar tree corridors around the world—powering transportation, communities, and infrastructure with clean, sustainable energy.</p>
-      <a href="mailto:info@crawfordsolarpower.com" class="cta">Partner with Us</a>
+    <div class="container hero-grid">
+      <div>
+        <h1>Build the Solar Tree Network.</h1>
+        <p>From churches and community sites in Texas and Georgia to a full DER aggregation platform run by Urban Marvel.</p>
+        <a class="btn-primary" id="founder-link"
+          href="https://buy.stripe.com/cNibIU04w9mMcDC5kv00000"
+          target="_blank" rel="noopener">Become a $100 Founder</a>
+        <p class="note">Your $100 helps site the first Crawford Solar Tree pads and prove the VPP concept.</p>
+      </div>
+      <div class="hero-card">
+        <h2>Today’s focus</h2>
+        <ul>
+          <li>Site 1–3 trees in TX / DeKalb</li>
+          <li>Connect PV + BESS + EV</li>
+          <li>Activate the Urban Marvel dispatcher</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <section id="about" class="section about">
-    <div>
-      <h2>About Our Solar Trees</h2>
-      <p>Each “tree” is a 10 kW modular canopy that harvests sunlight and powers electric vehicles, grid storage, and roadside services. Designed for durability and elegance, our installations redefine how highways look—and how they work.</p>
+  <section id="eden" class="section alt">
+    <div class="container">
+      <h2>EDEN Tree Campaign</h2>
+      <p>
+        A featured highlight project — not the whole brand. EDEN Tree lets churches, neighborhood groups,
+        and founder-donors claim a tree in the network and watch it power real services.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Why EDEN?</h3>
+          <p>Faith-aligned, community-first framing to seed the network in places that say yes fastest.</p>
+        </div>
+        <div class="card">
+          <h3>What it funds</h3>
+          <p>Structural solar canopies/trees, batteries, and on-site EV/service loads.</p>
+        </div>
+        <div class="card">
+          <h3>Where it goes</h3>
+          <p>Texas cities and DeKalb County, GA first — replicable anywhere we have partner churches.</p>
+        </div>
+      </div>
     </div>
-    <img src="assets/solar-tree.jpg" alt="Solar Tree example">
   </section>
 
-  <section id="gallery" class="section gallery">
-    <h2>Project Gallery</h2>
-    <div class="grid">
-    <video
-     class="gallery-video"
-     src="assets/tree-dawn.mp4"
-     autoplay muted loop playsinline
-     poster="assets/photo1.jpg"
-   >
-     Your browser doesn’t support HTML5 video.
-   </video>
-      <img src="assets/photo2.jpg" alt="Installation overview">
-      <img src="assets/photo3.jpg" alt="Close‑up of panels">
-      <img src="assets/photo4.jpg" alt="EV charging under solar canopy">
+  <section id="fleet" class="section">
+    <div class="container">
+      <h2>Urban Marvel “Hive” EV Fleet & Driving School</h2>
+      <p>
+        Every tree can power a service: EV rentals, corporate fleet charging, or a follow-the-leader driving
+        school. This is how we turn DER capacity into daily revenue.
+      </p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Fleet Charging</h3>
+          <p>Offer clean charging to local businesses and city partners.</p>
+        </div>
+        <div class="card">
+          <h3>EV Rental / Turo-ready</h3>
+          <p>Tie into your existing 9-vehicle concept and show bankable cashflow.</p>
+        </div>
+        <div class="card">
+          <h3>Driving School Corridors</h3>
+          <p>Use S.E.V.E.N. style routes to showcase platooning & safe EV ops.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Crawford Solar Power • 1942 W Gray St #1035, Houston, TX 77019• <a href="mailto:info@crawfordsolarpower.com" style="color:#eee;text-decoration:underline;">info@crawfordsolarpower.com</a>
+  <section id="learn" class="section alt">
+    <div class="container">
+      <h2>How This Becomes a Virtual Power Plant</h2>
+      <p>
+        We aggregate many small, tree-like DER nodes (PV + batteries + V2G-capable EVs) and let a market-based controller
+        decide who buys/sells power every few minutes. This is the same principle used in Sekou Crawford’s NASA work on
+        “Power Management in Regenerative Life Support Systems Using Market-Based Control.”</p>
+      <p>
+        As we grow, we match the NREL “DER Aggregation” business model to sell flexibility and services in deregulated
+        markets — without needing a legacy utility to own everything. </p>
+    </div>
+  </section>
+
+  <section id="founder" class="section">
+    <div class="container narrow">
+      <h2>Become a Founder-Donor Today</h2>
+      <p>Claim your spot in the network and help us stand up the first automated factory for Crawford Solar Trees.</p>
+      <a class="btn-primary"
+        href="https://buy.stripe.com/cNibIU04w9mMcDC5kv00000"
+        target="_blank" rel="noopener">Give $100 Now</a>
+    </div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <p><strong>Contact:</strong> info@crawfordsolarpower.com • Urban Marvel, LLC</p>
+      <p>© 2025 Crawford Solar Power Co. Ltd. All rights reserved.</p>
+    </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>
